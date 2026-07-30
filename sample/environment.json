@@ -1,0 +1,25 @@
+{
+  "name": "Contoso Production",
+  "type": "production",
+  "dedicated_production": true,
+  "business_owner": "Customer Operations",
+  "audit_enabled": true,
+  "dlp_policy": "Enterprise Production",
+  "backup_enabled": false,
+  "solutions": [
+    {"name": "Case Management", "managed": true},
+    {"name": "Shared Utilities", "managed": false}
+  ],
+  "flows": [
+    {"name": "Case Escalation", "owner_type": "service_account"},
+    {"name": "VIP Notification", "owner_type": "personal"}
+  ],
+  "connection_references": [
+    {"name": "shared_dataverse", "configured": true},
+    {"name": "shared_outlook", "configured": false}
+  ],
+  "environment_variables": [
+    {"name": "ApiBaseUrl", "has_current_value": true},
+    {"name": "SupportMailbox", "has_current_value": true}
+  ]
+}
